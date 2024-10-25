@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management System</title>
+</head>
+<body>
+    <h1>Placing an Order</h1>
+
+    <label for="product-selector"> Select Product:</label>
+    <select id="product-selector">
+            <option value="60"> Sink - $60</option>
+            <option value="70"> Stove - $70</option>
+            <option value="50"> Microwave - $50</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" value="1" min="1">
+
+    <p>Total Price: $<span id="total-price">60</span></p>
+    <button id="place-order"> Place Order</button>
+    <p id="order-summary"></p>
+
+    <script src="main.js"></script>
+</body>
+</html>
