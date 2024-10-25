@@ -16,3 +16,12 @@ function updateTotalPrice() {
 
 productSelector.addEventListener('change', updatePrice);
 quantityInput.addEventListener('input', updatePrice);
+
+//places order for selected product
+placeOrderButton.addEventListener('click', function() {
+    const selectedProduct = productSelector.options[productSelector.selectedIndex].text;
+    const quantity = quantityInput.value;
+    const totalPrice = totalPriceElement.textContent;
+    
+    orderSummary.textContent = `Placed ordered for ${quantity} ${selectedProduct}. Total price: $${totalPrice}`;
+});
